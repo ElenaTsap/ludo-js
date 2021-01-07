@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleni's Ludo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;400;500;600;700&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/dc3beb17c2.js" crossorigin="anonymous"></script>
+    <script async src="main.js"></script>
+</head>
+<body>
+    <h1 onclick="showDice()">I don't know how to play Ludo <br> but I can code it</h1>
+    <main>
+        <div id="main-board">
+
+            <!-- connecting lines -->
+            <div id="lines-container">
+                <div id="top-lines" class="lines"></div>
+                <div id="right-lines" class="lines"></div>
+                <div id="bottom-lines" class="lines"></div>
+                <div id="left-lines" class="lines"></div>
+            </div>
+            
+            <div id="main-container">
+
+                <!-- first row -->
+                <div id="initial-red-0" class="red big"><img src="./circle-pawn.png" alt=""></div>
+                <div id="initial-red-1" class="red big"><img src="./circle-pawn.png" alt=""></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="white medium" id="pos9"></div>
+                <div class="white medium" id="pos10"></div>
+                <div class="green medium" id="pos11"><i class="fas fa-arrow-down"></i></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div id="initial-green-0" class="green big"><img src="./circle-pawn.png" alt=""></div>
+                <div id="initial-green-1" class="green big"><img src="./circle-pawn.png" alt=""></div>
+
+                <!-- second row -->
+                <div id="initial-red-2" class="red big"><img src="./circle-pawn.png" alt=""></div>
+                <div id="initial-red-3" class="red big"><img src="./circle-pawn.png" alt=""></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="white medium" id="pos8"></div>
+                <div class="green small"></div>
+                <div class="white medium" id="pos12"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div id="initial-green-2" class="green big"><img src="./circle-pawn.png" alt=""></div>
+                <div id="initial-green-3" class="green big"><img src="./circle-pawn.png" alt=""></div>
+                
+                <!-- third row -->
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="white medium" id="pos7"></div>
+                <div class="green small"></div>
+                <div class="white medium" id="pos13"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+
+                <!-- fourth row -->
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="white medium" id="pos6"></div>
+                <div class="green small"></div>
+                <div class="white medium" id="pos14"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+
+                <!-- fifth row -->
+                <div class="red medium" id="pos1"><i class="fas fa-arrow-right"></i></div>
+                <div class="white medium" id="pos2"></div>
+                <div class="white medium" id="pos3"></div>
+                <div class="white medium" id="pos4"></div>
+                <div class="white medium" id="pos5"><i class="fas fa-star"></i></div>
+                <div class="green small"></div>
+                <div class="white medium" id="pos15"><i class="fas fa-star"></i></div>
+                <div class="white medium" id="pos16"></div>
+                <div class="white medium" id="pos17"></div>
+                <div class="white medium" id="pos18"></div>
+                <div class="white medium" id="pos19"></div>
+
+                <!-- sixth row -->
+                <div class="white medium" id="pos40"></div>
+                <div class="red small"></div>
+                <div class="red small"></div>
+                <div class="red small"></div>
+                <div class="red small"></div>
+                <div class="empty"></div>
+                <div class="yellow small"></div>
+                <div class="yellow small"></div>
+                <div class="yellow small"></div>
+                <div class="yellow small"></div>
+                <div class="white medium" id="pos20"></div>
+
+                <!-- seventh row -->
+                <div class="white medium" id="pos39"></div>
+                <div class="white medium" id="pos38"></div>
+                <div class="white medium" id="pos37"></div>
+                <div class="white medium" id="pos36"></div>
+                <div class="white medium" id="pos35"><i class="fas fa-star"></i></div>
+                <div class="blue small"></div>
+                <div class="white medium" id="pos25"><i class="fas fa-star"></i></div>
+                <div class="white medium" id="pos24"></div>
+                <div class="white medium" id="pos23"></div>
+                <div class="white medium" id="pos22"></div>
+                <div class="yellow medium" id="pos21"><i class="fas fa-arrow-left"></i></div>
+
+                <!-- eighth row -->
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="white medium" id="pos34"></div>
+                <div class="blue small"></div>
+                <div class="white medium" id="pos26"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+
+                <!-- ninth row -->
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="white medium" id="pos33"></div>
+                <div class="blue small"></div>
+                <div class="white medium" id="pos27"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                
+                <!-- tenth row -->
+                <div id="initial-blue-0" class="blue big"><img src="./circle-pawn.png" alt=""></div>
+                <div id="initial-blue-1" class="blue big"><img src="./circle-pawn.png" alt=""></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="white medium" id="pos32"></div>
+                <div class="blue small"></div>
+                <div class="white medium" id="pos28"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div id="initial-yellow-0" class="yellow big"><img src="./circle-pawn.png" alt=""></div>
+                <div id="initial-yellow-1"  class="yellow big"><img src="./circle-pawn.png" alt=""></div>
+
+                <!-- eleventh row -->
+                <div id="initial-blue-2" class="blue big"><img src="./circle-pawn.png" alt=""></div>
+                <div id="initial-blue-3" class="blue big"><img src="./circle-pawn.png" alt=""></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="blue medium" id="pos31"><i class="fas fa-arrow-up"></i></div>
+                <div class="white medium" id="pos30"></div>
+                <div class="white medium" id="pos29"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div id="initial-yellow-2" class="yellow big"><img src="./circle-pawn.png" alt=""></div>
+                <div id="initial-yellow-3" class="yellow big"><img src="./circle-pawn.png" alt=""></div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
